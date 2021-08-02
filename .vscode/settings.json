@@ -65,7 +65,8 @@
         "typeinfo": "cpp",
         "unordered_map": "cpp",
         "utility": "cpp",
-        "cstdbool": "cpp"
+        "cstdbool": "cpp",
+        "list": "cpp"
     },
     "C_Cpp.errorSquiggles": "Disabled"
 }
