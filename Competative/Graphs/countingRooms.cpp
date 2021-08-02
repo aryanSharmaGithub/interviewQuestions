@@ -1,7 +1,7 @@
 #include<bits/stdc++.h>
 #pragma GCC diagnostic ignored "-Wc++11-extensions"
 using namespace std;
-
+//Test to check for github
 int n,m,rooms;
 vector<vector<bool> > visited;
 bool isValid(int x,int y){
