@@ -1,1 +1,0 @@
-{"name":"Local: shortestRoutes1","url":"/Users/aryansharma/Downloads/C++ Prac/Competative/Graphs/shortestRoutes1.cpp","tests":[{"id":1628055734778,"input":"3 4\n1 2 6\n1 3 2\n3 2 3\n1 3 4","output":"0 5 2"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/Users/aryansharma/Downloads/C++ Prac/Competative/Graphs/shortestRoutes1.cpp","group":"local","local":true}
