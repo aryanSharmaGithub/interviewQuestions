@@ -1,16 +1,11 @@
 Competative/Graphs/Labyrinth
 Competative/Graphs/Labyrinth
 Competative/Graphs/monster
-.gitignore
-.gitignore
 Competative/Graphs/.cph/.monster.cpp_b1fa4836569444b36c992debe21bc360.prob
 Competative/Graphs/monster.bin
 Competative/Graphs/practiceCodes.bin
-.gitignore
 Competative/Graphs/.cph/.practiceCodes.cpp_106bae27bd648ed9c4ba6ad51337d6e2.prob
 Competative/Graphs/practiceCodes.cpp
-testCode.cpp
-testCode.cpp
 testCode.cpp
 *.bin
 *.dSYM
