@@ -9,3 +9,5 @@ Competative/Graphs/practiceCodes.cpp
 testCode.cpp
 *.bin
 *.dSYM
+**/lib/*.bin
+**/lib/*.dSYM

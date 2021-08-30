@@ -33,6 +33,21 @@ int calDiameter(Node *root,int *height){
     return max(currDiameter,max(lDiameter,rDiameter));
 }
 
+// Striver Way
+int maxH(Node *root, int &dis){
+    if(!root) return 0;
+    int lChild = maxH(root->left,dis);
+    int rChild = maxH(root->right,dis);
+    dis = max(dis,lChild+rChild);
+    return max(lChild,rChild)+1;
+}
+
+int diameterOfBT(Node *root){
+    int dis = 0;
+    maxH(root,dis);
+    return dis+1; // +1 not needed for the original LC ques but done here to satisfy the condition
+}
+
 int main()
 {
     Node *root = new Node(1);
@@ -44,4 +59,5 @@ int main()
     root->right->right = new Node(7);
     int height = 0;
     cout<<calDiameter(root,&height)<<endl;
+    cout<<diameterOfBT(root)<<endl;
 }
