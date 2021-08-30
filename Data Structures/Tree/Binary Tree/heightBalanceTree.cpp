@@ -35,6 +35,19 @@ bool heightBalance(Node*root, int *height){
     else return false;
 }
 
+int maxHeight(Node *root){
+    if(!root) return 0;
+    int lChild = maxHeight(root->left);
+    int rChild = maxHeight(root->right);
+    if(lChild==-1 || rChild==-1) return -1;
+    if(abs(lChild-rChild)>1) return -1;
+    return max(lChild,rChild)+1;
+}
+
+bool isBalanced(Node *root){
+    return (maxHeight(root)!=-1)? true:false;
+}
+
 int main()
 {
     Node *root = new Node(1);
@@ -46,4 +59,7 @@ int main()
     root->right->right = new Node(7);
     int height = 0;
     cout<<heightBalance(root,&height)<<endl;
+
+    //2nd way
+    cout<<isBalanced(root)<<endl;
 }
