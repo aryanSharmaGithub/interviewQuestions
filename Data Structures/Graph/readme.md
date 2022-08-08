@@ -42,5 +42,5 @@ void dijkstras(vector<pair<int, int>> graph[], int src, int V){
 
 ```
 
-**Time Complexity** - O(V^<sub>2</sub>) (Can be improved to O(E logV))
+**Time Complexity** - O(V^<sup>2</sup>) (Can be improved to O(E logV))
 **Space Complexity** - O(E)
