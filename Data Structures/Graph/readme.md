@@ -4,11 +4,11 @@ Idhar we take minimum distance jo hum given source to dest travel kar sakte hai.
 
 ## Steps
 
-1.) Make a dis array of size V.
-2.) Take a priority queue and push {dis, node} in it
-3.) Run basic BFS
-4.) Compare if the current distance is greater than the distance coming via node
-    a.) If yes, then update the value in dis array and push the {dis,node} in queue
+1.) Make a dis array of size V. <br/>
+2.) Take a priority queue and push {dis, node} in it. <br/>
+3.) Run basic BFS. <br/>
+4.) Compare if the current distance is greater than the distance coming via node <br/>
+    a.) If yes, then update the value in dis array and push the {dis,node} in queue <br/>
 
 > Code
 
@@ -42,5 +42,5 @@ void dijkstras(vector<pair<int, int>> graph[], int src, int V){
 
 ```
 
-**Time Complexity** - O(V^<sup>2</sup>) (Can be improved to O(E logV))
+**Time Complexity** - O(V<sup>2</sup>) (Can be improved to O(E logV)) <br/>
 **Space Complexity** - O(E)
