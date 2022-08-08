@@ -8,7 +8,7 @@ int LCSPalindrome(string x,int n)
     for(int i=0;i<n+1;i++)
     {
         y[i]=x[n-i];
-        cout<<y[i];
+        // cout<<y[i];
     }
     cout<<endl;
     int t[n+1][n+1];

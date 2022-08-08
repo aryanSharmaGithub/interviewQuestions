@@ -1,3 +1,41 @@
+// #include<bits/stdc++.h>
+// using namespace std;
+
+// int frogJump(vector<int> height, int n,vector<int> &t, int k){
+//     // if(k>height.size()) return 0;
+//     // if(n==0) return 0;
+//     // int ans = INT_MAX;
+//     // for(int i=1;i<=k;i++){
+//     //     int a = INT_MAX;
+//     //     if(n>=i) a = frogJump(height,n-i,t,k) + abs(height[n-i] - height[n]);
+//     //     ans = min(a,ans);
+//     // }
+//     // return ans;
+//     if(k>height.size()) return 0;
+//     t[0] = 0;
+//     // if(t[n]!=-1) return t[n];
+//     // int m = INT_MAX;
+//     // t[n] = m;
+//     // for(int i=1;i<=k;i++){
+//     //     if(i<=n) m = frogJump(height,n-i,t,k) + abs(height[n-i]-height[n]);
+//     //     t[n] = min(t[n],m);
+//     // }
+//     for(int i=1;i<n;i++){
+//         int m = 55;
+//         for(int j=1;j<=k;j++){
+//             if(i>=j) m = min(m,t[i-j] + abs(height[i-j]-height[i]));
+//         }
+//         t[i] = m;
+//     }
+//     return t[n-1];
+// }
+
+// int main() 
+// {
+//     vector<int> height = {30,50,60,20,40,20};
+//     vector<int> t(7,10000);
+//     cout<<frogJump(height,height.size(),t,3)<<endl;
+// }
 #include<bits/stdc++.h>
 using namespace std;
 

@@ -45,7 +45,7 @@ int maxH(Node *root, int &dis){
 int diameterOfBT(Node *root){
     int dis = 0;
     maxH(root,dis);
-    return dis+1; // +1 not needed for the original LC ques but done here to satisfy the condition
+    return dis+1; // +1 not needed for the original LC ques but done here to satisfy the condition.
 }
 
 int main()

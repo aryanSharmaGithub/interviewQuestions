@@ -1,45 +1,33 @@
-#include<iostream>
-#include<queue>
+#include <iostream>
+#include <vector>
+#include <algorithm>
 using namespace std;
 
-class Node{
-    public:
-    int data;
-    Node *left;
-    Node *right;
-    Node(int val){
-        data=val;
-        left = NULL;
-        right = NULL;
-    }
-};
+int maxi;
+int f(int n,vector<long long> &dp,int a){
+    if(n==0) return 0;
+    if(n>maxi) return 1e9;
+//     cout<<n<<endl;
+    if(dp.at(n)!= -1) return dp.at(n);
+    
+    int pos = (n-a >= 0) ? 1 + f(n-a,dp,a+1) : 1e9;
+    int neg = 1 + f(n+a,dp,a+1);
+    
+    return dp.at(n) = min(pos,neg);
+}
 
-bool checkIdentical(Node *root1, Node *root2){
-    if(!root1 && !root2) return true;
-    else if(!root1 || !root2) return false;
-    else{
-        bool condition1 = (root1->data == root2->data);
-        bool condition2 = checkIdentical(root1->left,root2->left);
-        bool condition3 = checkIdentical(root1->right,root2->right);
-        return condition1 && condition2 && condition3;
-    }
+int minRobotMoves(int n) {
+    if(n==1) return 1;
+    maxi = (n*(n+1))/2;
+    vector<long long> dp(maxi+1, -1);
+    
+    int ans = f(n,dp,1);
+//     cout<<ans<<endl;
+    return ans;
+//     return 0;
 }
 
 int main()
 {
-    Node *root = new Node(1);
-    root->left = new Node(2);
-    root->right = new Node(3);
-    root->left->left = new Node(4);
-    root->left->right = new Node(5);
-    root->right->left = new Node(6);
-    root->right->right = new Node(7);
-    Node *root2 = new Node(1);
-    root2->left = new Node(2);
-    root2->right = new Node(3);
-    root2->left->left = new Node(4);
-    root2->left->right = new Node(5);
-    root2->right->left = new Node(6);
-    root2->right->right = new Node(7);
-    cout<<checkIdentical(root,root2)<<endl;
+    cout<<minRobotMoves(4)<<endl;
 }
