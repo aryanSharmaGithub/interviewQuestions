@@ -8,7 +8,7 @@ Idhar we take minimum distance jo hum given source to dest travel kar sakte hai.
 2.) Take a priority queue and push {dis, node} in it. <br/>
 3.) Run basic BFS. <br/>
 4.) Compare if the current distance is greater than the distance coming via node <br/>
-- a.) If yes, then update the value in dis array and push the {dis,node} in queue <br/>
+- If yes, then update the value in dis array and push the {dis,node} in queue <br/>
 
 > Code
 
