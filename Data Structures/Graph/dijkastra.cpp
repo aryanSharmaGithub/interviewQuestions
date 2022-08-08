@@ -39,7 +39,7 @@ void dijkstras(vector<pair<int, int>> graph[], int src, int V){
 int main(){
     int V = 9;
     vector<pair<int, int>> graph[V];
-    addEdge(graph ,0, 1, 4); 
+    addEdge(graph ,0, 1, 10); 
     addEdge(graph ,0, 7, 8); 
     addEdge(graph ,1, 2, 8); 
     addEdge(graph ,1, 7, 11); 
