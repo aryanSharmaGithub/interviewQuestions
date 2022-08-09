@@ -4,11 +4,11 @@ Idhar we take minimum distance jo hum given source to dest travel kar sakte hai.
 
 ## Steps
 
-1.) Make a dis array of size V. <br/>
-2.) Take a priority queue and push {dis, node} in it. <br/>
-3.) Run basic BFS. <br/>
-4.) Compare if the current distance is greater than the distance coming via node <br/>
-- If yes, then update the value in dis array and push the {dis,node} in queue <br/>
+1. Make a dis array of size V. <br/>
+2. Take a priority queue and push {dis, node} in it. <br/>
+3. Run basic BFS. <br/>
+4. Compare if the current distance is greater than the distance coming via node <br/>
+    1. If yes, then update the value in dis array and push the {dis,node} in queue <br/>
 
 > Code
 
@@ -49,7 +49,45 @@ void dijkstras(vector<pair<int, int>> graph[], int src, int V){
 
 Detect negative weighted cycle (which Dijkastra cannot). <br/>
 
-1. A numbered list
-    1. A nested numbered list
-    2. Which is numbered
-2. Which is numbered
+1. Apply Dijkastra n-1 times.
+2. Apply one more time.
+    1. If value of any distance changes, there is a negative cycle at play.
+    2. Otherwise there is no negative cycle present
+
+> Code
+
+``` c++
+
+int bellmonFord(int n, int m, int src, int dest, vector<vector<int>> &edges) {
+    vector<int> dis(n+1,1e9);
+    dis[src] = 0;
+    
+    // Dijkastra (n-1) times
+    for(int i=0;i<n;i++){
+        for(int j=0;j<m;j++){
+            int u = edges[j][0];
+            int v = edges[j][1];
+            int wt = edges[j][2];
+            
+            if(dis[u]!=1e9 and (dis[v] > dis[u] + wt)){
+                dis[v] = dis[u] + wt;
+            }
+        }
+    }
+    
+    // Cycle detection
+    int flag = 0;
+    for(int j=0;j<m;j++){
+        int u = edges[j][0];
+        int v = edges[j][1];
+        int wt = edges[j][2];
+            
+        if(dis[u]!=1e9 and (dis[v] > dis[u] + wt)){
+            return -1;
+        }
+    }
+    
+    return dis[dest];
+}
+
+```
