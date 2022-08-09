@@ -44,3 +44,12 @@ void dijkstras(vector<pair<int, int>> graph[], int src, int V){
 
 **Time Complexity** - O(V<sup>2</sup>) (Can be improved to O(E logV)) <br/>
 **Space Complexity** - O(E)
+
+# Bellman Ford
+
+Detect negative weighted cycle (which Dijkastra cannot). <br/>
+
+<li>
+    <li>Hi</li>
+    <li>Ho</li>
+</li>
