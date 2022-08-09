@@ -49,7 +49,7 @@ void dijkstras(vector<pair<int, int>> graph[], int src, int V){
 
 Detect negative weighted cycle (which Dijkastra cannot). <br/>
 
-<li>
-    <ol>Hi</ol>
-    <ol>Ho</ol>
-</li>
+1. A numbered list
+    1. A nested numbered list
+    2. Which is numbered
+2. Which is numbered
