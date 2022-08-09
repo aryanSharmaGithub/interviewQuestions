@@ -50,6 +50,6 @@ void dijkstras(vector<pair<int, int>> graph[], int src, int V){
 Detect negative weighted cycle (which Dijkastra cannot). <br/>
 
 <li>
-    <li>Hi</li>
-    <li>Ho</li>
+    <ol>Hi</ol>
+    <ol>Ho</ol>
 </li>
