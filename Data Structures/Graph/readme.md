@@ -1,8 +1,10 @@
-# Dijkastra
+# Shortest path
+
+## 1. Dijkastra
 
 Idhar we take minimum distance jo hum given source to dest travel kar sakte hai. Like nikal hum har kisi ki skte hai.
 
-## Steps
+### Steps
 
 1. Make a dis array of size V. <br/>
 2. Take a priority queue and push {dis, node} in it. <br/>
@@ -45,10 +47,11 @@ void dijkstras(vector<pair<int, int>> graph[], int src, int V){
 **Time Complexity** - O(V<sup>2</sup>) (Can be improved to O(E logV)) <br/>
 **Space Complexity** - O(E)
 
-# Bellman Ford
+## 2. Bellman Ford
 
 Detect negative weighted cycle (which Dijkastra cannot). <br/>
 
+### Steps
 1. Apply Dijkastra n-1 times.
 2. Apply one more time.
     1. If value of any distance changes, there is a negative cycle at play.
@@ -91,3 +94,5 @@ int bellmonFord(int n, int m, int src, int dest, vector<vector<int>> &edges) {
 }
 
 ```
+
+#
